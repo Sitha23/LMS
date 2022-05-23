@@ -34,6 +34,7 @@
         padding: 5px;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 #00aea6f0, 0 6px 20px 0 #00aea6f0;
+        overflow-y: auto;
     }
     </style>
 </head>
@@ -89,15 +90,24 @@
                 <div class="container1">
                     <div class="box">
                     <h9 style="color:white" class="display-4 text-center">View List of Return Book</h9>
-
+                  
+                   <center>
+                      <br>
+                      <label class="control-label" style="color:white; font-size: 24px;">List of return book status:</label>
+                      <a href="viewReturned.php" class="btn btn-primary">Return</a>
+                       <a href="viewNotReturn.php" class="btn btn-primary">Not Return</a>
+                       <br>
+                      </center>
+                      <br>
+            
                     <?php if (isset($_GET['success'])) { ?>
                     <div class="alert alert-success" role="alert">
                         <?php echo $_GET['success']; ?>
                     </div>
                     <?php }?>
-
+                   
                     <?php if (mysqli_num_rows($result)){?>
-                    <table class="table table-striped">
+                    <table style="overflow-y: auto;" class="table table-striped" >
                     <thead>
                         <tr>
                         <th scope="col">Return Book ID</th>
@@ -115,6 +125,7 @@
                     $n = 0;
                     while($rows = mysqli_fetch_assoc($result)){
                         $n++;
+                     
                     ?>
                         <tr>
                         <th scope="row"><?=$n?></th>
