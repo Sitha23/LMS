@@ -6,7 +6,7 @@
 		die(" Connection Error "); 
 	}
 	
-	$query = "SELECT Book_title, 
+	/*$query = "SELECT Book_title, 
 				Book_author, 
 				publication_date, 
 				totalPages, 
@@ -14,7 +14,34 @@
 				Book_rating 
 				FROM book";
 	
-	$result = mysqli_query($conn, $query);
+	$result = mysqli_query($conn, $query);*/
+
+	//function to search in book list
+	if(isset($_POST['search']))
+	{
+		$valueToSearch = $_POST['valueToSearch'];
+		// search in all table columns
+		// using concat mysql function
+		
+		$query = "SELECT * FROM `book` 
+					WHERE CONCAT(`ISBN`, `Book_title`, `Book_author`, `Book_desc`,`publication_date`, `totalPages`, `Book_rating`) LIKE '%".$valueToSearch."%'";
+		
+		$search_result = filterTable($query);
+		
+	}
+	else 
+	{
+		$query = "SELECT * FROM `book`";
+		$search_result = filterTable($query);
+	}
+
+	//function to filter results in book list
+	function filterTable($query)
+	{
+		$connect = mysqli_connect("localhost", "root", "", "lms_db");
+		$filter_Result = mysqli_query($connect, $query);
+		return $filter_Result;
+	}
 ?>
 
 <!DOCTYPE html>
