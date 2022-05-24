@@ -77,10 +77,10 @@
                 <h2 class="animate__animated animate__fadeInDown">Book Record Management</h2>
                 <p class="animate__animated animate__fadeInUp">A place to <br>keep track of <br>all your book records</p>
 				
-				<form action="manageBook.php" method="post">	
+				<form action="manageBook.php" method="post">
 					<input type="button" value="Add Book" onclick="location.href='./addBook.php'">
-					<input type="button" value="Delete Book" onclick="location.href='./BookList.php'">
-					<input type="button" value="Update Book" onclick="location.href='./BookList.php'">
+          <!-- Combined Delete Book and Update Book function into Book List function -->
+					<input type="button" value="View Book List" onclick="location.href='./BookList.php'">
 				</form>
 			  </div>
             </div>
