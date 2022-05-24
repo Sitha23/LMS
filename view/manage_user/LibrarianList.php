@@ -192,6 +192,7 @@
 							<td><?php echo $phoneNum ?></td>
 							<td><?php echo $Email ?></td>
 							<td><a id="greenlinks" href="LibrarianListDetails.php?GetLibrarian=<?php echo $librarianID ?>">View Details</a></td>
+							<td><a id="greenlinks" href="UpdateLibrarian.php?GetBorrower=<?php echo $librarianID ?>">Update</a></td>
 						</tr>
 					  <?php
 						}
