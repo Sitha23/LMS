@@ -195,6 +195,52 @@
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">List Of Books</h2>
 				<center>
+
+				<!-- Search Function -->
+				<input class="search" type="text" style="width:80%;"name="valueToSearch" placeholder="Search Book List">
+				<input id="but" style="width: 15%;" class="gap" type="submit" name="search" value="Search"><br><br>
+
+				<!-- Filter function -->
+				<div style="float:left; background-color:#00aea6;padding:25px;height:400px;border:2px solid black" class="col-2 text-left">
+					<h1 style="color:#ffd600;letter-spacing:2px;padding:10px;font-size:24px;font-weight:bold;">Filter By :</h1><hr>
+					<!-- Filter by ISBN -->
+					<div class="form-check d-flex">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1" style="color: white;">
+							ISBN
+						</label>
+					</div>
+					<!-- Filter by Book Title -->
+					<div class="form-check d-flex">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+						<label class="form-check-label" for="defaultCheck2" style="color: white;">
+							Book Title
+						</label>
+					</div>
+					<!-- Filter by Book Author -->
+					<div class="form-check d-flex">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+						<label class="form-check-label" for="defaultCheck2" style="color: white;">
+							Book Author
+						</label>
+					</div>
+					<!-- Filter by Publication Date -->
+					<div class="form-check d-flex">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+						<label class="form-check-label" for="defaultCheck2" style="color: white;">
+							Publication Date
+						</label>
+					</div>
+					<!-- Filter by Book Rating -->
+					<div class="form-check d-flex">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+						<label class="form-check-label" for="defaultCheck2" style="color: white;">
+							Book Rating
+						</label>
+					</div><hr>
+					<!-- Apply Button -->
+					<input type="button" style="width:100%;" value="Apply" onclick="location.href='./manage_book_record.php'">
+				</div>
 					
 				<div class="table-wrapper-scroll-y my-custom-scrollbar">	
 					<!-- list of existing books -->
