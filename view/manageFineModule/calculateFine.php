@@ -143,7 +143,7 @@
 							
 							<tr>
 								<th>Total Fine Amount</th>
-								<td><input type="text" id="total" name="total" placeholder="Total Fine" disabled></td>
+								<td><input type="text" id="total" name="total" disabled></td>
 							</tr>
 						</table><br>
 						
