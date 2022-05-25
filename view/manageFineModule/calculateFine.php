@@ -135,11 +135,6 @@
 								<th>Total days after due</th>
 								<td><input type="text" id="days" name="days" disabled></td>
 							</tr>
-              
-							<tr>
-								<th>Total days after due</th>
-								<td><input type="text" id="days" name="days" placeholder="Total days "></td>
-							</tr>
 							
 							<!-- <tr> 
 								<th>Fine Amount per day</th>
@@ -148,7 +143,7 @@
 							
 							<tr>
 								<th>Total Fine Amount</th>
-								<td><input type="text" id="total" name="total" placeholder="Total Fine"></td>
+								<td><input type="text" id="total" name="total" placeholder="Total Fine" disabled></td>
 							</tr>
 						</table><br>
 						
