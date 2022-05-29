@@ -221,7 +221,7 @@
 					<input id="but" style="width: 15%;" class="gap" type="submit" name="search" value="Search"><br><br>
 				</form>
 					
-				<div class="table-wrapper-scroll-y my-custom-scrollbar">	
+				<div class="table-wrapper-scroll-y my-custom-scrollbar col-12">	
 					<!-- list of existing books -->
 					<table class="table table-bordered table-striped mb-0">
 					  <tr id="list">
