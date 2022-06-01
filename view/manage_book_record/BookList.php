@@ -243,7 +243,7 @@
 					  </tr>
 					  
 					  <?php
-						while($row=mysqli_fetch_assoc($result))
+						while($row=mysqli_fetch_assoc($search_result))
 						{
 							$ISBN = $row['ISBN'];
 							$Book_title = $row['Book_title'];
