@@ -34,6 +34,14 @@
 		$query = "SELECT * FROM `book`";
 		$search_result = filterTable($query);
 	}
+
+	//function to filter results in book list
+	function filterTable($query)
+	{
+		$connect = mysqli_connect("localhost", "root", "", "lms_db");
+		$filter_Result = mysqli_query($connect, $query);
+		return $filter_Result;
+	}
 ?>
 
 <!DOCTYPE html>
