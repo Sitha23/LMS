@@ -1,6 +1,6 @@
 <?php 
 include "DatabaseCon.php";
 
-$sql = "SELECT * FROM returnbook  WHERE ReturnStatus='not return' LIMIT 3";
+$sql = "SELECT * FROM returnbook  WHERE ReturnStatus='not return' ";
 $result = mysqli_query($conn, $sql);
 ?>
