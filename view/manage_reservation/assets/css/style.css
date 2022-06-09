@@ -986,6 +986,18 @@ table, tr, th, td
 		background: #00aea6f0;
 		color: black;
 	}
+  
+  .my-custom-scrollbar
+	{
+		position: left;
+		height: 350px;
+		overflow: auto;
+	}
+	
+  .table-wrapper-scroll-y
+	{
+		display: block;
+	}
 
 /*--------------------------------------------------------------
 # Footer
