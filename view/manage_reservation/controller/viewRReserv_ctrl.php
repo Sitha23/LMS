@@ -1,6 +1,6 @@
 <?php 
 include "DatabaseCon.php";
 
-$sql = "SELECT * FROM roomreservation ORDER BY RoomReservID DESC LIMIT 3";
+$sql = "SELECT * FROM roomreservation ORDER BY RoomReservID ";
 $result = mysqli_query($conn, $sql);
 ?>
