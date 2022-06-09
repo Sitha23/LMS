@@ -88,9 +88,10 @@
               <div class="container">
                 <h3 style="color:white" class="animate__animated animate__fadeInDown">Manage Return Book</h3>
                 <div class="container1">
-                    <div class="box">
+                 
+                  <div class="box">
                     <h9 style="color:white" class="display-4 text-center">View List of Return Book</h9>
-                  
+                   
                    <center>
                       <br>
                       <label class="control-label" style="color:white; font-size: 24px;">List of return book status:</label>
@@ -98,8 +99,9 @@
                        <a href="viewNotReturn.php" class="btn btn-primary">Not Return</a>
                        <br>
                       </center>
+                      
                       <br>
-            
+                  	
                     <?php if (isset($_GET['success'])) { ?>
                     <div class="alert alert-success" role="alert">
                         <?php echo $_GET['success']; ?>
@@ -107,7 +109,9 @@
                     <?php }?>
                    
                     <?php if (mysqli_num_rows($result)){?>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
                     <table style="overflow-y: auto;" class="table table-striped" >
+                    
                     <thead>
                         <tr>
                         <th scope="col">Return Book ID</th>
@@ -120,6 +124,7 @@
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
+
                     <tbody>
                     <?php
                     $n = 0;
@@ -142,16 +147,22 @@
                             <a href="controller/deleteReturn_ctrl.php?ReturnBookID=<?=$rows['ReturnBookID']?>" 
                               class="btn btn-danger">Delete</a></td>
                         </tr>
-
+                    
                     <?php  }?>
+                    
                     </tbody>
+                    </div>
                     </table>
+                    
                     <?php  }?>
-                    <div>
+                    
+                   
+                   </div>
+                   <br>
+                   <div>
                     <a href="MReturn.php" class="btn btn-primary">Create</a>
                     <a href="managereserv.php" class="btn btn-primary">Back</a>
                     </div>
-              </div>
             </div>
           </div>
         </div>

@@ -104,6 +104,7 @@
                     <?php }?>
 
                     <?php if (!$result || mysqli_num_rows($result)>0){?>
+                      <div class="table-wrapper-scroll-y my-custom-scrollbar">
                     <table class="table table-striped">
                     <thead>
                         <tr>
@@ -141,13 +142,18 @@
 
                     <?php  }?>
                     </tbody>
+                    </div>
                     </table>
+                    
                     <?php  }?>
-                    <div>
+                    
+                   
+                   </div>
+                   <br>
+                   <div>
                     <a href="MReturn.php" class="btn btn-primary">Create</a>
                     <a href="managereserv.php" class="btn btn-primary">Back</a>
                     </div>
-              </div>
             </div>
           </div>
         </div>
