@@ -4,6 +4,41 @@ include "DatabaseCon.php";
 $sql = "SELECT id, borrower_name, days, fine, total FROM calculatefine ORDER BY id";
 
 $result = mysqli_query($conn, $sql);
+
+
+$conn = mysqli_connect("localhost", "root", "", "lms_db");
+	
+	if(!$conn) 
+	{ 
+		die(" Connection Error "); 
+	}
+
+//function to search in book list
+if(isset($_POST['search']))
+{
+  $valueToSearch = $_POST['valueToSearch'];
+
+  
+  $query = "SELECT * FROM `calculatefine` 
+        WHERE CONCAT(`id`, `borrower_name`, `days`, `fine`,`total`) LIKE '%".$valueToSearch."%'";
+  
+  $search_result = filterTable($query);
+  
+}
+else 
+{
+  $query = "SELECT * FROM `calculatefine`";
+  $search_result = filterTable($query);
+}
+
+//function to filter results in book list
+function filterTable($query)
+{
+  $connect = mysqli_connect("localhost", "root", "", "lms_db");
+  $filter_Result = mysqli_query($connect, $query);
+  return $filter_Result;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -195,6 +230,13 @@ $result = mysqli_query($conn, $sql);
                   <!--input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Title, ISBN or author" title="Type in a name"-->
 
                   <center>
+
+                  <form action="finedRecordReportList.php" method="POST">
+				        	<!-- Search Function -->
+				        	<input class="search" type="text" style="width:80%;"name="valueToSearch" placeholder="Search Fined Record Report List">
+				      	  <input id="but" style="width: 15%;" class="gap" type="submit" name="search" value="Search"><br><br>
+			          	</form>
+
                     <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
                       <table class="table table-bordered table-striped mb-0">
@@ -209,7 +251,7 @@ $result = mysqli_query($conn, $sql);
               					</tr>
 
                           <?php
-              						while($row=mysqli_fetch_assoc($result))
+              						while($row=mysqli_fetch_assoc($search_result))
               						{
               							$id = $row['id'];
               							$borrower_name = $row['borrower_name'];

@@ -212,7 +212,7 @@ include "controller/bookController.php";
 
 															<tr>
 																<th style="background-color: #ffd600;color:black;"><b>PUBLICATION DATE</b></th>
-																<td><input type="date" id="publication_date" name="publication_date" value="<?php $n = 0; echo $publication_date ?>" readonly></td>
+																<td><input type="text" id="publication_date" name="publication_date" value="<?php $n = 0; echo $publication_date ?>" readonly></td>
 															</tr>
 
 															<tr>
@@ -222,12 +222,12 @@ include "controller/bookController.php";
 
 															<tr>
 																<th style="background-color: #ffd600;color:black;"><b>PAGES</b></th>
-																<td><input type="number" id="totalPages" name="totalPages" value="<?php $n = 0; echo $totalPages ?>" readonly></td>
+																<td><input type="text" id="totalPages" name="totalPages" value="<?php $n = 0; echo $totalPages ?>" readonly></td>
 															</tr>
 
 															<tr>
 																<th style="background-color: #ffd600;color:black;"><b>RATING</b></th>
-																<td><input type="number" id="Book_rating" name="Book_rating" value="<?php $n = 0; echo $Book_rating ?>" readonly></td>
+																<td><input type="text" id="Book_rating" name="Book_rating" value="<?php $n = 0; echo $Book_rating ?>" readonly></td>
 															</tr>
 
 												</table>

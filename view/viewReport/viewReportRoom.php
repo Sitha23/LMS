@@ -212,7 +212,7 @@ include "controller/roomController.php";
 
         														<tr>
         															<th style="background-color: #ffd600;color:black;">RESERVATION DATE</th>
-        															<td><input type="date" id="reservDate" name="reservDate" value="<?php echo $reservDate ?>" readonly></td>
+        															<td><input type="text" id="reservDate" name="reservDate" value="<?php echo $reservDate ?>" readonly></td>
         													</table><br>
 
         							</p><br>

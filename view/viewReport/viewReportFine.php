@@ -194,7 +194,7 @@ include "controller/fineController.php";
         								<table id="tabledata">
         									<tr>
         										<th style="background-color: #ffd600;color:black;">ID</th>
-        										<td><input type=number id="id" name="id" value="<?php echo $id ?>" readonly></td>
+        										<td><input type="text" id="id" name="id" value="<?php echo $id ?>" readonly></td>
         									</tr>
 
         									<tr>
@@ -204,17 +204,17 @@ include "controller/fineController.php";
 
         									<tr>
         										<th style="background-color: #ffd600;color:black;">DAYS</th>
-        										<td><input type=number id="days" name="days" value="<?php echo $days ?>" readonly></td>
+        										<td><input type="text" id="days" name="days" value="<?php echo $days ?>" readonly></td>
         									</tr>
 
         									<tr>
         										<th style="background-color: #ffd600;color:black;">FINE</th>
-        										<td><input type=number id="fine" name="fine" value="<?php echo $fine ?>" readonly></td>
+        										<td><input type="text" id="fine" name="fine" value="<?php echo $fine ?>" readonly></td>
         									</tr>
 
         									<tr>
         										<th style="background-color: #ffd600;color:black;">TOTAL (MYR)</th>
-        										<td><input type=text id="total" name="total" value="<?php echo $total ?>" readonly></td>
+        										<td><input type="text" id="total" name="total" value="<?php echo $total ?>" readonly></td>
         									</tr>
 
         								</table>

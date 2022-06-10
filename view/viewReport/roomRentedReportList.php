@@ -6,6 +6,40 @@ $sql = "SELECT RoomReservID, BorrowerName, RoomID, RoomName, reservDate
 
 $result = mysqli_query($conn, $sql);
 
+
+$conn = mysqli_connect("localhost", "root", "", "lms_db");
+	
+	if(!$conn) 
+	{ 
+		die(" Connection Error "); 
+	}
+
+//function to search in book list
+if(isset($_POST['search']))
+{
+  $valueToSearch = $_POST['valueToSearch'];
+
+  
+  $query = "SELECT * FROM `roomreservation` 
+        WHERE CONCAT(`RoomReservID`, `BorrowerName`, `RoomID`, `RoomName`,`reservDate`) LIKE '%".$valueToSearch."%'";
+  
+  $search_result = filterTable($query);
+  
+}
+else 
+{
+  $query = "SELECT * FROM `roomreservation`";
+  $search_result = filterTable($query);
+}
+
+//function to filter results in book list
+function filterTable($query)
+{
+  $connect = mysqli_connect("localhost", "root", "", "lms_db");
+  $filter_Result = mysqli_query($connect, $query);
+  return $filter_Result;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -197,6 +231,13 @@ $result = mysqli_query($conn, $sql);
                   <!--buka kembali nanti-->
 
                   <center>
+
+                  <form action="roomRentedReportList.php" method="POST">
+				        	<!-- Search Function -->
+				        	<input class="search" type="text" style="width:80%;"name="valueToSearch" placeholder="Search Room Rented Report List">
+				      	  <input id="but" style="width: 15%;" class="gap" type="submit" name="search" value="Search"><br><br>
+			          	</form>
+
 										<div class="table-wrapper-scroll-y my-custom-scrollbar">
 
 											<table class="table table-bordered table-striped mb-0">
@@ -213,7 +254,7 @@ $result = mysqli_query($conn, $sql);
 
 														<?php
 														$n = 0;
-															while($row=mysqli_fetch_assoc($result))
+															while($row=mysqli_fetch_assoc($search_result))
 															{
 																$RoomReservID = $row['RoomReservID'];
 																$BorrowerName = $row['BorrowerName'];
