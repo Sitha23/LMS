@@ -131,11 +131,6 @@
 								<th>Return Date</th>
 								<td><input type="date" id="return_date" name="return_date" placeholder="Return Date"></td>
 							</tr>
-
-              <tr> 
-								<th>Fine Amount per day</th>
-								<td><input type="text" id="fine" name="fine" placeholder="Fine Amount"></td>
-							</tr>
               
 							<tr>
 								<th>Total days after due</th>
@@ -149,8 +144,7 @@
 						</table><br>
 						
 						<input type="button" value="Back " onclick="location.href='./manageFineModule.php'">
-						<input type="submit" value="Save" name="Confirm" onclick="calculateFine()">
-						<input type="submit" value="Calculate Fine" name="Confirm" onclick="calculateFine()">
+						<input type="submit" value="Calculate Fine" name="Confirm" >
             <input type="reset" value="Reset">
 					</center>
 				</form>

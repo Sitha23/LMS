@@ -37,3 +37,6 @@
 		header("location:../../view/manageFineModule/addBorrowerDetails.php");
 	}
 ?>
+
+
+

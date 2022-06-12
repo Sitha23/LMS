@@ -8,13 +8,29 @@
 	
 	if(isset($_POST['Confirm']))
 	{
+		{
+			$borrowed_date = $_POST['borrowed_date'];
+			$return_date = $_POST['return_date'];
+			
+			$bdate = strtotime($borrowed_date);
+			$rdate = strtotime($return_date);
+
+			$diff = ($rdate - $bdate)/60/60/24;
+			echo $diff, 'days';
+
+			$fine = 0.5;
+			
+			$ftotal = $diff * 0.5;
+			echo 'RM', $ftotal;
+
+		}
 
 		$id = $_POST['id'];
 		$borrower_name = $_POST['borrower_name'];
 		$borrowed_date = $_POST['borrowed_date'];
 		$return_date = $_POST['return_date'];
 		$days = $diff;
-		$fine = $_POST['fine'];
+		$fine = $fine;
 		$total = $ftotal;
 		
 		$query = "INSERT INTO calculatefine (id, borrower_name, days, fine, total)
