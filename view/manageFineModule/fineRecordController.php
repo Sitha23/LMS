@@ -15,7 +15,7 @@
 			$bdate = strtotime($borrowed_date);
 			$rdate = strtotime($return_date);
 
-			$diff = ($rdate - $bdate)/60/60/24;
+			$diff = (($rdate - $bdate)/60/60/24) - 14;
 			echo $diff, 'days';
 
 			$fine = 0.5;
