@@ -132,15 +132,6 @@
 								<td><input type="date" id="return_date" name="return_date" placeholder="Return Date"></td>
 							</tr>
               
-							<tr>
-								<th>Total days after due</th>
-								<td><input type="text" id="days" name="days" disabled></td>
-							</tr>
-							
-							<tr>
-								<th>Total Fine Amount</th>
-								<td><input type="text" id="total" name="total" disabled></td>
-							</tr>
 						</table><br>
 						
 						<input type="button" value="Back " onclick="location.href='./manageFineModule.php'">

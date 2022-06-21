@@ -18,9 +18,9 @@
 			$diff = (($rdate - $bdate)/60/60/24) - 14;
 			echo $diff, 'days';
 
-			$fine = 0.5;
+			$fine = 0.2;
 			
-			$ftotal = $diff * 0.5;
+			$ftotal = $diff * 0.2;
 			echo 'RM', $ftotal;
 
 		}
